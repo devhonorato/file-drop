@@ -1,0 +1,92 @@
+.upload-galeria {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.cartao-personalizado {
+  width: 105px !important;
+  height: 110px !important;
+  margin: 5px;
+  border-color: #d9d9d9;
+}
+
+.cartao-imagem {
+  height: 90px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.cartao-corpo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #242424;
+  border-top: 1px solid #d9d9d9;
+}
+
+.cartao-titulo {
+  text-align: center;
+  margin: 0px;
+  font-size: 10px;
+}
+
+:host {
+  display: block;
+  box-sizing: border-box;
+}
+
+pre {
+  text-align: center;
+  padding: 8px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.mat-list-item {
+  margin: 2px 0;
+  border: 1px solid gray;
+}
+
+.dndList {
+  transition: all 300ms ease;
+  padding: 5px;
+  /* &:not(.horizontal).dndDragover {
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+&.horizontal {
+  &.dndDragover {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+  }
+  .mat-list-item {
+    max-width: 120px;
+    margin: 2px;
+  }
+} */
+}
+
+.dndDragging {
+  border: 1px solid green;
+}
+
+.dndDraggingSource {
+  display: none;
+}
+
+.dndPlaceholder {
+  width: 105px !important;
+  height: 110px !important;
+  border: 1px dashed green;
+  background-color: rgba(0, 0, 0, 0.1);
+}

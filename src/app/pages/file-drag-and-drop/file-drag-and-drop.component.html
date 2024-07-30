@@ -1,0 +1,68 @@
+<!-- <div class="mt-5 mb-4 d-flex">
+  <h3 class="m-0">{{title}}</h3>
+</div> -->
+
+<div class="mb-3">
+  <ngx-file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+      <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+          <!-- Solte o seu arquivo aqui ou click no botão -->
+          Drop your file here or click the button
+          <button type="button" class="btn btn-sm btn-primary" (click)="openFileSelector()">Send files</button>
+      </ng-template>
+  </ngx-file-drop>
+</div>
+
+<div *ngIf="processedImages.length != 0" style=" display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; flex-direction: row;margin-top: 60px; ">
+  <h4>Gallery</h4>
+  <button type="button" class="btn btn-sm" (click)="limparGaleria()"> Clear gallery </button>
+</div>
+
+<div class="upload-galeria" *ngIf="processedImages.length != 0" [dndDropzone]="[]" (dndDrop)="onDrop($event, processedImages)">
+
+  <div dndPlaceholderRef class="dndPlaceholder">
+  </div>
+
+  <div class="card cartao-personalizado" *ngFor="let item of processedImages; let i=index" [dndDraggable]="item" [dndEffectAllowed]="'copyMove'" [dndDisableIf]="false" (dndMoved)="onDragged(item, processedImages, 'move')">
+
+      <div *ngIf="item.type.includes('image')">
+          <!-- <img [src]="item[1].url" class="card-img-top" alt="..."> -->
+          <div class="cartao-imagem" style="background-image: url('{{item.compressedImage.imageDataUrl}}')">
+
+          </div>
+      </div>
+      <div *ngIf="!item.type.includes('image')">
+          <div class="cartao-imagem" style="background-image: url('../assets/img/file.jpg');">
+
+          </div>
+      </div>
+      <div class="card-body p-0 m-0 cartao-corpo">
+          <small class="card-title cartao-titulo">{{redutorDeNome(item.compressedImage.fileName, 19)}}</small>
+          <!-- <p class="card-text">{{ item[0].type }}</p>
+            <a [href]="item[1].url" target="_blank" class="btn btn-primary">Abrir</a> -->
+      </div>
+
+
+  </div>
+
+
+
+</div>
+
+
+<div>
+  <!-- <input id="inputImage" type="file" accept="image/*" (change)="onChange($event)" multiple /> -->
+  <!-- <b *ngIf="showTitle">Original Image List</b>
+
+  <div *ngFor="let item of processedImages">
+      <img src="{{item.imageDataUrl}}">
+  </div> -->
+
+  <!-- <b *ngIf="showTitle">Compressed Image List</b>
+  <div style="display: flex;flex-direction: row;flex-wrap: wrap;align-items: center;">
+      <div *ngFor="let item of processedImages">
+          <img src="{{item.compressedImage.imageDataUrl}}" height="200" style="margin: 5px;">
+          <p>{{item.compressedImage.fileName}}</p>
+      </div>
+  </div> -->
+
+</div>

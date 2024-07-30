@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+
+.ngx-file-drop__drop-zone {
+    border: 2px dotted #007bff !important;
+    border-radius: 20px !important;
+    height: 100px !important;
+    margin: auto !important;
+}
+
+.ngx-file-drop__drop-zone--over {
+    background-color: #e9efff !important;
+    border: 2px solid #007bff !important;
+}
+
+.ngx-file-drop__content {
+    align-items: center !important;
+    color: #007bff !important;
+    display: flex !important;
+    height: 100px !important;
+    justify-content: space-evenly !important;
+    flex-direction: column !important;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.bg-dark {
+  background: #191919 !important;
+}
+
+.btn-primary {
+  background: #007bff;
+}
+
+.background-padrao-snackbar {
+  /* background: linear-gradient(0deg, rgb(41 41 41) 50%, rgb(54 54 54) 50%); */
+  color: #fff;
+  height: 60px;
+  display: grid !important;
+  align-items: center;
+}
+
+.background-danger-snackbar {
+  /* background: radial-gradient(#ff0000, #660000); */
+  background: #dc3545;
+  color: #fff;
+  height: 60px;
+  display: grid !important;
+  align-items: center;
+}
+
+.background-warning-snackbar {
+  background: #ff991a;
+  color: #fff;
+  height: 60px;
+  display: grid !important;
+  align-items: center;
+}
+
+.background-success-snackbar {
+  background: #198754;
+  color: #fff;
+  height: 60px;
+  display: grid !important;
+  align-items: center;
+}
+
+.mat-simple-snackbar-action {
+  color: #ffffff;
+}
+
+.full-screen-modal{
+  padding: 1em;
+  width: 100%;
+  height: 100%;
+  cursor: initial;
+}
+
+.full-screen-modal .mat-dialog-container {
+  padding: 1em;
+  width: 100%;
+  height: 100%;
+  cursor: initial;
+}
